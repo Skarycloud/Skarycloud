@@ -1,4 +1,4 @@
-![My Cool Banner](https://ibb.co/cKkBrxBQ)
+![My Cool Banner](https://jmp.sh/s/EXIzHNp0rfQ78mPYsDJg)
 # 💫 About Me:
 🔭 I'm currently  contributing to the Solar Data Lake platform.<br><br>👯 I'm looking to collaborate on enhancing web applications with React and AI/ML integrations.<br><br>🤝 I'm looking for help with advanced AI/ML implementations.<br><br>🌱 I'm currently learning more about advanced AI/ML techniques for web development.<br><br>💬 Ask me about React development, API integration, and Ionic Framework for app conversions.<br><br>⚡Fun fact: I've converted a stock market analyzer into an Android app.
 
