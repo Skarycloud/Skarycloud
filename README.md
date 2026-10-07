@@ -1,28 +1,123 @@
-![My Cool Banner](https://github.com/Skarycloud/Skarycloud/blob/main/Banner.PNG)
-# 💫 About Me:
-🔭 I'm currently  contributing to the Solar Data Lake platform.<br><br>👯 I'm looking to collaborate on enhancing web applications with React and AI/ML integrations.<br><br>🤝 I'm looking for help with advanced AI/ML implementations.<br><br>🌱 I'm currently learning more about advanced AI/ML techniques for web development.<br><br>💬 Ask me about React development, API integration, and Ionic Framework for app conversions.<br><br>⚡Fun fact: I've converted a stock market analyzer into an Android app.
+<a href="https://sumanth-kumar-portfolio.vercel.app/">
+  <img src="./GitHubBanner.png" alt="Sumanth Kumar, Full-stack Developer & AI Product Builder" width="100%" />
+</a>
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=22&duration=2600&pause=900&color=ECC47E&center=true&vCenter=true&width=760&lines=I+design+and+build+real+products+for+web+%26+mobile.;From+the+Figma+file+to+the+Play+Store+listing.;Founder+of+eMenu+%C2%B7+Co-founder+of+Auralion+Labs.;Currently+exploring+agentic+AI." alt="I design and build real products for web and mobile" />
+</p>
 
-## 🌐 Socials:
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/skarycloud) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/www.linkedin.com/in/sumanth-kumar-230194294) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:sumanth.k.0202@gmail.com) 
+<p align="center">
+  <a href="https://sumanth-kumar-portfolio.vercel.app/"><img src="https://img.shields.io/badge/Portfolio-ECC47E?style=for-the-badge&logo=vercel&logoColor=111111" alt="Portfolio" /></a>
+  <a href="https://www.linkedin.com/in/sumanth-kumar-230194294"><img src="https://img.shields.io/badge/LinkedIn-1E1F22?style=for-the-badge&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" /></a>
+  <a href="mailto:sumanth.k.0202@gmail.com"><img src="https://img.shields.io/badge/Email-1E1F22?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Email" /></a>
+  <a href="https://x.com/SumanthKum75525"><img src="https://img.shields.io/badge/X-1E1F22?style=for-the-badge&logo=x&logoColor=white" alt="X" /></a>
+  <a href="https://www.instagram.com/skarycloud/"><img src="https://img.shields.io/badge/Instagram-1E1F22?style=for-the-badge&logo=instagram&logoColor=E4405F" alt="Instagram" /></a>
+</p>
 
-# 💻 Tech Stack:
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![Ionic](https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&logo=Ionic&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white) ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white) ![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![WordPress](https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white) ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white) ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white) ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white) ![mlflow](https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white) ![Scipy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![Power Bi](https://img.shields.io/badge/power_bi-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=Skarycloud&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=Skarycloud&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Skarycloud&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
-
-## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=Skarycloud&theme=radical&no-frame=true&no-bg=false&margin-w=4)
-
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
-
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=Skarycloud&limit=5&theme=dark&combine_all_yearly_contributions=true)
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=Skarycloud&label=Profile%20views&color=ECC47E&style=flat-square" alt="Profile views" />
+  <img src="https://img.shields.io/badge/Open%20to-freelance%20%26%20collabs-3fb950?style=flat-square" alt="Open to freelance and collaborations" />
+  <img src="https://img.shields.io/badge/Based%20in-Mangalore%2C%20India-1E1F22?style=flat-square" alt="Based in Mangalore, India" />
+</p>
 
 ---
-[![](https://visitcount.itsvg.in/api?id=Skarycloud&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+### 👋 About me
+
+<img src="./assets/droid.svg" align="right" width="210" alt="A small floating droid waving hello" />
+
+I'm **Sumanth**, a full-stack developer and AI product builder from **Mangalore, India**. I design and build real products for web and mobile, from the Figma file to the Play Store listing.
+
+- 💼 **Associate MERN Stack Developer & Test Engineer** at **Mirchi35**, where I've shipped two Android apps (React Native + Expo) to Google Play
+- 🚀 **Founder** of [eMenu](https://emenuweb.com/), a digital menu SaaS for restaurants
+- 🧪 **Co-founder** of [Auralion Labs](https://auralionlabs.com/), a product studio for AI, web, mobile and SaaS
+- 🎨 Freelance product and UI/UX design: Figma → React / React Native
+- 🤖 Lately: agentic workflows, AI-powered features, and on-device AI in the browser
+- 🎓 BCA in AI & Machine Learning, Manipal University Jaipur (2024 – 2027)
+
+<br clear="right" />
+
+<p align="center">
+  <img src="./assets/terminal.svg" width="100%" alt="Terminal: whoami prints Sumanth Kumar, full-stack developer and AI product builder; ./ship runs design, build, test, ship and AI steps" />
+</p>
+
+---
+
+### 🛠️ Tech stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,tailwind,html,css&theme=dark" alt="Frontend" /><br />
+  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,firebase,supabase,python&theme=dark" alt="Backend and data" /><br />
+  <img src="https://skillicons.dev/icons?i=figma,git,github,docker,postman,vscode,vercel,netlify&theme=dark" alt="Design, tools and deployment" />
+</p>
+
+<p align="center">
+  <b>Mobile:</b> React Native · Expo · Ionic · Capacitor &nbsp;·&nbsp; <b>AI:</b> Agentic systems · Transformers.js · Gemini · Google ADK
+</p>
+
+---
+
+### 📱 Featured work
+
+| Project | What it is | Link |
+|---|---|---|
+| 🛍️ **Mirchi35 Studio** | Vendor app for a live local-discovery platform (React Native + Expo) | [Google Play](https://play.google.com/store/apps/details?id=com.mirchi35.studio) |
+| 🌐 **Mirchi35 Community Connect** | Multi-language community app (React Native + Expo) | [Google Play](https://play.google.com/store/apps/details?id=com.mirchi35.pulse) |
+| 🍽️ **eMenu** | QR digital menu SaaS I founded (Next.js, Supabase, Stripe) | [emenuweb.com](https://emenuweb.com/) |
+| 🦁 **Auralion Labs** | My product studio's website (Next.js, GSAP, Sanity) | [auralionlabs.com](https://auralionlabs.com/) |
+| 🗺️ **Scavenge** | Real-world scavenger hunts with GPS and leaderboards | [scavenge.rs](https://scavenge.rs/) |
+| 🩺 **Wren** | Agentic healthcare assistant *(hackathon)* (Gemini + Google ADK) | [Devpost](https://allthingsagentichackathon.devpost.com/) |
+
+<details>
+<summary><b>More projects</b></summary>
+<br />
+
+[GT-Five](https://play.google.com/store/apps/details?id=com.gtfive.gtfive_app) (app UI/UX & branding) · [Vakya](https://vakya.fun/) · [Oryx AI](https://oryx-ai.vercel.app/) · [Code Stack](https://codestack-sigma.vercel.app/) · [image-π](https://image-pi-dusky.vercel.app/) · [Salary Split](https://salary-split-three.vercel.app/)
+
+</details>
+
+---
+
+### ✨ My portfolio
+
+Hand-built in plain HTML, CSS and JavaScript: animated scenes of how I ship, a droid assistant with an on-device AI brain, and every project I've built. **[Visit it →](https://sumanth-kumar-portfolio.vercel.app/)** · [Source](https://github.com/Skarycloud/SumanthKumar_Portfolio)
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Skarycloud/SumanthKumar_Portfolio/main/docs/media/scene-mobile.gif" alt="Mobile app scene" width="32%" />
+  <img src="https://raw.githubusercontent.com/Skarycloud/SumanthKumar_Portfolio/main/docs/media/scene-website.gif" alt="Website scene" width="32%" />
+  <img src="https://raw.githubusercontent.com/Skarycloud/SumanthKumar_Portfolio/main/docs/media/scene-ai.gif" alt="AI automation scene" width="32%" />
+</p>
+
+---
+
+### 📊 GitHub stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Skarycloud&show_icons=true&hide_border=true&bg_color=0d1117&title_color=ECC47E&icon_color=ECC47E&text_color=c9d1d9" alt="GitHub stats" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Skarycloud&layout=compact&hide_border=true&bg_color=0d1117&title_color=ECC47E&text_color=c9d1d9" alt="Top languages" height="165" />
+</p>
+
+<p align="center">
+  <img src="https://nirzak-streak-stats.vercel.app/?user=Skarycloud&hide_border=true&background=0d1117&ring=ECC47E&fire=ECC47E&currStreakLabel=ECC47E&sideLabels=c9d1d9&dates=8b949e&currStreakNum=c9d1d9&sideNums=c9d1d9" alt="GitHub streak" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Skarycloud&bg_color=0d1117&color=c9d1d9&title_color=ECC47E&line=ECC47E&point=ffffff&area=true&area_color=ECC47E&hide_border=true&custom_title=Contribution%20activity" alt="Contribution activity graph" width="100%" />
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Skarycloud/Skarycloud/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Skarycloud/Skarycloud/output/github-snake.svg" />
+    <img src="https://raw.githubusercontent.com/Skarycloud/Skarycloud/output/github-snake-dark.svg" alt="Snake eating my contribution graph" width="100%" />
+  </picture>
+</p>
+
+---
+
+<p align="center">
+  <b>Have a product idea, need a web or mobile app, or want to build something with AI?</b><br />
+  <a href="mailto:sumanth.k.0202@gmail.com">sumanth.k.0202@gmail.com</a>
+</p>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:ECC47E&height=120&section=footer" width="100%" alt="" />
