@@ -10,6 +10,7 @@ handy for previewing locally.
 import datetime as dt
 import json
 import os
+import random
 import re
 import sys
 import urllib.request
@@ -234,6 +235,185 @@ def activity_card(days, window=60):
 """
 
 
+DROID = [  # pixel sprite, 12 x 14, facing right
+    ".....GG.....",
+    ".....WW.....",
+    "..WWWWWWWW..",
+    ".WDDDDDDDDW.",
+    ".WDKKKKKKDW.",
+    ".WDKKGKKGDW.",
+    ".WDKKGKKGDW.",
+    ".WDKKKKKKDW.",
+    ".WDDDDDDDDW.",
+    "..WWWWWWWW..",
+    "...WDGGDW...",
+    "..WWDDDDWW..",
+    "...WDDDDW...",
+    "...WWWWWW...",
+]
+DROID_LEGS = ["...W....W...", "....W..W...."]
+BUG = [".R....R.", "..RRRR..", ".RWRRWR.", "RRRRRRRR", "RRRRRRRR"]
+BUG_LEGS = ["R.R..R.R", ".R.RR.R."]
+PIXEL = {"W": TEXT, "D": "#161b22", "K": BG, "G": GOLD, "R": "#f85149"}
+
+
+def sprite(rows, x=0, y=0, scale=2):
+    """Pixel rows -> rects, merging horizontal runs of one colour."""
+    out = []
+    for r, row in enumerate(rows):
+        c = 0
+        while c < len(row):
+            ch, start = row[c], c
+            while c < len(row) and row[c] == ch:
+                c += 1
+            if ch != ".":
+                out.append(f'<rect x="{x + start * scale}" y="{y + r * scale}" width="{(c - start) * scale}" '
+                           f'height="{scale}" fill="{PIXEL[ch]}"/>')
+    return "".join(out)
+
+
+def keyframes(name, frames):
+    return f"@keyframes {name} {{ " + " ".join(f"{p:.2f}% {{ {css} }}" for p, css in frames) + " }"
+
+
+def platformer_card(days):
+    """A pixel droid runs through the last 12 months, bumping a block per month and stomping bugs."""
+    months = {}
+    for day, count in days:
+        months[(day.year, day.month)] = months.get((day.year, day.month), 0) + count
+    months = sorted(months.items())[-12:]
+
+    width, height, ground = 860, 256, 206
+    cycle, run_end = 18, 82.0  # seconds per loop, % of the loop spent running
+    x0, x1 = 16, 790  # droid's left edge at start / finish
+    first, last = 92, 732
+    centers = [first + i * (last - first) / (len(months) - 1) for i in range(len(months))]
+
+    def at(cx):  # loop % when the droid's centre passes cx
+        return (cx - 18 - x0) / (x1 - x0) * run_end
+
+    half = 1.4  # % of the loop for half a jump
+    jumps, css, blocks, bugs = [], [], [], []
+
+    for i, (((year, month), count), cx) in enumerate(zip(months, centers)):
+        label = dt.date(year, month, 1).strftime("%b")
+        bx = cx - 12
+        blocks.append(f'<text x="{cx:.1f}" y="{ground + 30}" font-size="11" fill="{MUTED}" text-anchor="middle">{label}</text>')
+        if not count:  # empty month: a plain brick, nothing to hit
+            blocks.append(f'<g><rect x="{bx:.1f}" y="98" width="24" height="24" fill="#21262d" stroke="{FAINT}"/>'
+                          f'<path d="M{bx:.1f} 110 h24 M{bx + 12:.1f} 98 v12 M{bx + 6:.1f} 110 v12 M{bx + 18:.1f} 110 v12" stroke="{FAINT}"/></g>')
+            continue
+        p = at(cx)
+        jumps.append((p, 36))
+        css.append(keyframes(f"bump{i}", [(0, "transform: translateY(0)"), (p, "transform: translateY(0)"),
+                                          (p + .8, "transform: translateY(-8px)"), (p + 1.8, "transform: translateY(0)"),
+                                          (100, "transform: translateY(0)")]))
+        css.append(keyframes(f"used{i}", [(0, "opacity: 0"), (p, "opacity: 0"), (p + .3, "opacity: 1"),
+                                          (95, "opacity: 1"), (97, "opacity: 0"), (100, "opacity: 0")]))
+        css.append(keyframes(f"coin{i}", [(0, "opacity: 0; transform: translateY(0)"),
+                                          (p, "opacity: 0; transform: translateY(0)"),
+                                          (p + .5, "opacity: 1; transform: translateY(-4px)"),
+                                          (p + 7, "opacity: 0; transform: translateY(-34px)"),
+                                          (100, "opacity: 0; transform: translateY(-34px)")]))
+        blocks.append(f"""
+    <g style="animation-name: bump{i}">
+      <rect x="{bx:.1f}" y="98" width="24" height="24" rx="3" fill="{GOLD}" stroke="#8a6d3b" stroke-width="2"/>
+      <text x="{cx:.1f}" y="116" font-size="15" font-weight="800" fill="#5c4520" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace">?</text>
+      <g style="animation-name: used{i}"><rect x="{bx:.1f}" y="98" width="24" height="24" rx="3" fill="#4a3c22" stroke="#8a6d3b" stroke-width="2"/>
+        <rect x="{bx + 4:.1f}" y="102" width="3" height="3" fill="#8a6d3b"/><rect x="{bx + 17:.1f}" y="102" width="3" height="3" fill="#8a6d3b"/></g>
+    </g>
+    <text style="animation-name: coin{i}" x="{cx:.1f}" y="90" font-size="13" font-weight="800" fill="{GOLD}" text-anchor="middle">+{count}</text>""")
+
+    for n, gap in enumerate((2, 6, 9)):  # bugs sit between blocks
+        mx = (centers[gap] + centers[gap + 1]) / 2
+        p = at(mx)
+        jumps.append((p, 34))
+        hit = p + half * .75
+        css.append(keyframes(f"squash{n}", [(0, "transform: scaleY(1); opacity: 1"), (hit, "transform: scaleY(1); opacity: 1"),
+                                            (hit + .3, "transform: scaleY(.25); opacity: 1"), (hit + 3, "transform: scaleY(.25); opacity: 1"),
+                                            (hit + 4, "transform: scaleY(.25); opacity: 0"), (96, "transform: scaleY(.25); opacity: 0"),
+                                            (97, "transform: scaleY(1); opacity: 1"), (100, "transform: scaleY(1); opacity: 1")]))
+        css.append(keyframes(f"pop{n}", [(0, "opacity: 0; transform: translateY(0)"), (hit, "opacity: 0; transform: translateY(0)"),
+                                         (hit + .4, "opacity: 1; transform: translateY(-6px)"),
+                                         (hit + 6, "opacity: 0; transform: translateY(-26px)"),
+                                         (100, "opacity: 0; transform: translateY(-26px)")]))
+        bx = mx - 12
+        bugs.append(f"""
+    <g class="squash" style="animation-name: squash{n}"><g class="crawl" style="animation-delay: -{n * .2:.1f}s">
+      {sprite(BUG, bx, ground - 21, 3)}
+      <g class="legA">{sprite([BUG_LEGS[0]] * 2, bx, ground - 6, 3)}</g><g class="legB">{sprite([BUG_LEGS[1]] * 2, bx, ground - 6, 3)}</g>
+    </g></g>
+    <text style="animation-name: pop{n}" x="{mx:.1f}" y="{ground - 30}" font-size="12" font-weight="800" fill="#f85149" text-anchor="middle">squashed!</text>""")
+
+    jumps.append((run_end + 2.5, 20))  # victory hop at the flag
+    hop = [(0, "transform: translateY(0)")]
+    for p, h in sorted(jumps):
+        hop += [(p - half, "transform: translateY(0); animation-timing-function: cubic-bezier(.2,.7,.4,1)"),
+                (p, f"transform: translateY(-{h}px); animation-timing-function: cubic-bezier(.6,0,.8,.3)"),
+                (p + half, "transform: translateY(0)")]
+    hop.append((100, "transform: translateY(0)"))
+    css.append(keyframes("hop", hop))
+    css.append(keyframes("run", [(0, f"transform: translateX({x0}px)"), (run_end, f"transform: translateX({x1}px)"),
+                                 (100, f"transform: translateX({x1}px)")]))
+    css.append(keyframes("show", [(0, "opacity: 0"), (1.5, "opacity: 1"), (93, "opacity: 1"), (96, "opacity: 0"), (100, "opacity: 0")]))
+    css.append(keyframes("flag", [(0, "transform: translateY(0)"), (run_end + .5, "transform: translateY(0)"),
+                                  (run_end + 4, "transform: translateY(-70px)"), (95, "transform: translateY(-70px)"),
+                                  (97, "transform: translateY(0)"), (100, "transform: translateY(0)")]))
+    css.append(keyframes("cheer", [(0, "opacity: 0"), (run_end + 3, "opacity: 0"), (run_end + 5, "opacity: 1"),
+                                   (94, "opacity: 1"), (96, "opacity: 0"), (100, "opacity: 0")]))
+
+    rng = random.Random(7)
+    stars = "".join(
+        f'<rect class="star" x="{rng.randint(20, 840)}" y="{rng.randint(50, 150)}" width="2" height="2" fill="{TEXT}" '
+        f'style="animation-delay: -{rng.random() * 3:.2f}s"/>' for _ in range(26))
+    bricks = "".join(
+        f'<rect x="{x}" y="{ground + (r * 10)}" width="20" height="10" fill="#1c1f26" stroke="{FAINT}"/>'
+        for r in range(4) for x in range(-10 + (r % 2) * 10, width, 20))
+    total = sum(c for _, c in months)
+    pole = width - 26
+
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-label="Pixel droid platformer: {total} contributions over the last 12 months, one block per month">
+  <style>
+    text {{ font-family: {FONT}; }}
+    g[style*="animation-name"], text[style*="animation-name"] {{ animation-duration: {cycle}s; animation-timing-function: linear; animation-iteration-count: infinite; }}
+    .run {{ animation: run {cycle}s linear infinite, show {cycle}s linear infinite; }}
+    .hop {{ animation: hop {cycle}s linear infinite; }}
+    .squash {{ transform-box: fill-box; transform-origin: bottom center; }}
+    .legA {{ animation: legA .28s step-end infinite; }}
+    .legB {{ animation: legB .28s step-end infinite; }}
+    @keyframes legA {{ 0% {{ opacity: 1; }} 50% {{ opacity: 0; }} }}
+    @keyframes legB {{ 0% {{ opacity: 0; }} 50% {{ opacity: 1; }} }}
+    .crawl {{ animation: crawl 1.2s ease-in-out infinite alternate; }}
+    @keyframes crawl {{ from {{ transform: translateX(-5px); }} to {{ transform: translateX(5px); }} }}
+    .star {{ animation: twinkle 3s ease-in-out infinite; }}
+    @keyframes twinkle {{ 0%, 100% {{ opacity: .15; }} 50% {{ opacity: .8; }} }}
+    {chr(10).join("    " + c for c in css)}
+    @media (prefers-reduced-motion: reduce) {{ * {{ animation: none !important; }} }}
+  </style>
+  <defs><clipPath id="card"><rect x=".5" y=".5" width="{width - 1}" height="{height - 1}" rx="12"/></clipPath></defs>
+  <g clip-path="url(#card)">
+    <rect width="{width}" height="{height}" fill="{BG}"/>
+    {stars}
+    {bricks}
+    <line x1="0" y1="{ground}" x2="{width}" y2="{ground}" stroke="#8a6d3b" stroke-width="2"/>
+  </g>
+  <rect x=".5" y=".5" width="{width - 1}" height="{height - 1}" rx="12" fill="none" stroke="{FAINT}"/>
+  <text x="28" y="34" font-size="15" font-weight="700" fill="{GOLD}">Contribution run</text>
+  <text x="{width - 28}" y="34" font-size="12" fill="{MUTED}" text-anchor="end">{total} contributions · last 12 months · 3 bugs squashed</text>
+  {"".join(blocks)}
+  {"".join(bugs)}
+  <rect x="{pole - 1}" y="70" width="3" height="{ground - 70}" fill="{TEXT}"/>
+  <circle cx="{pole + .5}" cy="68" r="4" fill="{GOLD}"/>
+  <g style="animation-name: flag"><path d="M{pole + 2} 146 l22 8 l-22 8 z" fill="{GOLD}"/></g>
+  <text style="animation-name: cheer" x="{pole - 10}" y="62" font-size="12" font-weight="800" fill="{GOLD}" text-anchor="end">shipped!</text>
+  <g class="run"><g class="hop">
+    {sprite(DROID, 0, ground - 48, 3)}
+    <g class="legA">{sprite([DROID_LEGS[0]] * 2, 0, ground - 6, 3)}</g><g class="legB">{sprite([DROID_LEGS[1]] * 2, 0, ground - 6, 3)}</g>
+  </g></g>
+</svg>
+"""
+
+
 def main():
     login, out_dir = sys.argv[1], sys.argv[2]
     os.makedirs(out_dir, exist_ok=True)
@@ -243,6 +423,7 @@ def main():
     cards = {
         "stats.svg": stats_card(days, fetch_languages(repos), stars, len(repos)),
         "activity.svg": activity_card(days),
+        "run.svg": platformer_card(days),
     }
     for name, svg in cards.items():
         with open(os.path.join(out_dir, name), "w", encoding="utf-8") as f:

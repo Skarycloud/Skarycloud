@@ -93,6 +93,10 @@ Hand-built in plain HTML, CSS and JavaScript: animated scenes of how I ship, a d
 ### 📊 GitHub stats
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/Skarycloud/Skarycloud/output/run.svg" alt="Pixel droid platformer: one block per month of contributions, bugs get squashed" width="100%" />
+</p>
+
+<p align="center">
   <img src="https://raw.githubusercontent.com/Skarycloud/Skarycloud/output/stats.svg" alt="Contributions, streaks and most used languages" width="100%" />
 </p>
 
