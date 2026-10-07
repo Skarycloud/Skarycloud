@@ -93,16 +93,11 @@ Hand-built in plain HTML, CSS and JavaScript: animated scenes of how I ship, a d
 ### 📊 GitHub stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Skarycloud&show_icons=true&hide_border=true&bg_color=0d1117&title_color=ECC47E&icon_color=ECC47E&text_color=c9d1d9" alt="GitHub stats" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Skarycloud&layout=compact&hide_border=true&bg_color=0d1117&title_color=ECC47E&text_color=c9d1d9" alt="Top languages" height="165" />
+  <img src="https://raw.githubusercontent.com/Skarycloud/Skarycloud/output/stats.svg" alt="Contributions, streaks and most used languages" width="100%" />
 </p>
 
 <p align="center">
-  <img src="https://nirzak-streak-stats.vercel.app/?user=Skarycloud&hide_border=true&background=0d1117&ring=ECC47E&fire=ECC47E&currStreakLabel=ECC47E&sideLabels=c9d1d9&dates=8b949e&currStreakNum=c9d1d9&sideNums=c9d1d9" alt="GitHub streak" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Skarycloud&bg_color=0d1117&color=c9d1d9&title_color=ECC47E&line=ECC47E&point=ffffff&area=true&area_color=ECC47E&hide_border=true&custom_title=Contribution%20activity" alt="Contribution activity graph" width="100%" />
+  <img src="https://raw.githubusercontent.com/Skarycloud/Skarycloud/output/activity.svg" alt="Contribution activity over the last 60 days" width="100%" />
 </p>
 
 <p align="center">
