@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="270" viewBox="0 0 860 270" role="img" aria-label="118 contributions in the last 60 days, peaking at 30 on Oct 9">
+  <style>
+    text { font-family: -apple-system, 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
+    .line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 2.4s .3s cubic-bezier(.4,0,.2,1) forwards; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    .fade { opacity: 0; animation: fade .8s ease-out forwards; }
+    @keyframes fade { to { opacity: 1; } }
+    .ping { transform-box: fill-box; transform-origin: center; animation: ping 2s 2.8s ease-out infinite; opacity: 0; }
+    @keyframes ping { 0% { transform: scale(1); opacity: .6; } 100% { transform: scale(3.2); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .line { animation: none; stroke-dashoffset: 0; } .fade { animation: none; opacity: 1; } .ping { display: none; } }
+  </style>
+  <defs>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ECC47E" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#ECC47E" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x=".5" y=".5" width="859" height="269" rx="12" fill="#0d1117" stroke="#30363d"/>
+  <text x="28" y="38" font-size="15" font-weight="700" fill="#ECC47E">Contribution activity</text>
+  <text x="832" y="38" font-size="12" fill="#8b949e" text-anchor="end">118 contributions · last 60 days</text>
+  <line x1="52" y1="222.0" x2="832" y2="222.0" stroke="#30363d" stroke-dasharray="0"/><text x="42" y="226.0" font-size="11" fill="#8b949e" text-anchor="end">0</text><line x1="52" y1="183.0" x2="832" y2="183.0" stroke="#30363d" stroke-dasharray="3 4"/><text x="42" y="187.0" font-size="11" fill="#8b949e" text-anchor="end">8</text><line x1="52" y1="144.0" x2="832" y2="144.0" stroke="#30363d" stroke-dasharray="3 4"/><text x="42" y="148.0" font-size="11" fill="#8b949e" text-anchor="end">16</text><line x1="52" y1="105.0" x2="832" y2="105.0" stroke="#30363d" stroke-dasharray="3 4"/><text x="42" y="109.0" font-size="11" fill="#8b949e" text-anchor="end">24</text><line x1="52" y1="66.0" x2="832" y2="66.0" stroke="#30363d" stroke-dasharray="3 4"/><text x="42" y="70.0" font-size="11" fill="#8b949e" text-anchor="end">32</text><text x="52.0" y="244" font-size="11" fill="#8b949e" text-anchor="middle">Aug 13</text><text x="184.2" y="244" font-size="11" fill="#8b949e" text-anchor="middle">Aug 23</text><text x="316.4" y="244" font-size="11" fill="#8b949e" text-anchor="middle">Sep 2</text><text x="448.6" y="244" font-size="11" fill="#8b949e" text-anchor="middle">Sep 12</text><text x="580.8" y="244" font-size="11" fill="#8b949e" text-anchor="middle">Sep 22</text><text x="713.0" y="244" font-size="11" fill="#8b949e" text-anchor="middle">Oct 2</text>
+  <path class="fade" style="animation-delay:1.6s" d="M52.0 222.0 L65.2 222.0 L78.4 217.1 L91.7 178.1 L104.9 222.0 L118.1 222.0 L131.3 222.0 L144.5 222.0 L157.8 222.0 L171.0 222.0 L184.2 222.0 L197.4 222.0 L210.6 222.0 L223.9 222.0 L237.1 222.0 L250.3 222.0 L263.5 222.0 L276.7 173.2 L290.0 222.0 L303.2 222.0 L316.4 222.0 L329.6 222.0 L342.8 217.1 L356.1 222.0 L369.3 222.0 L382.5 222.0 L395.7 222.0 L408.9 222.0 L422.2 222.0 L435.4 222.0 L448.6 222.0 L461.8 222.0 L475.1 222.0 L488.3 222.0 L501.5 222.0 L514.7 222.0 L527.9 222.0 L541.2 222.0 L554.4 222.0 L567.6 222.0 L580.8 222.0 L594.0 222.0 L607.3 192.8 L620.5 202.5 L633.7 222.0 L646.9 222.0 L660.1 222.0 L673.4 222.0 L686.6 222.0 L699.8 222.0 L713.0 222.0 L726.2 222.0 L739.5 222.0 L752.7 207.4 L765.9 148.9 L779.1 212.2 L792.3 163.5 L805.6 75.8 L818.8 129.4 L832.0 192.8 L832 222 L52 222 Z" fill="url(#area)"/>
+  <path class="line" d="M52.0 222.0 L65.2 222.0 L78.4 217.1 L91.7 178.1 L104.9 222.0 L118.1 222.0 L131.3 222.0 L144.5 222.0 L157.8 222.0 L171.0 222.0 L184.2 222.0 L197.4 222.0 L210.6 222.0 L223.9 222.0 L237.1 222.0 L250.3 222.0 L263.5 222.0 L276.7 173.2 L290.0 222.0 L303.2 222.0 L316.4 222.0 L329.6 222.0 L342.8 217.1 L356.1 222.0 L369.3 222.0 L382.5 222.0 L395.7 222.0 L408.9 222.0 L422.2 222.0 L435.4 222.0 L448.6 222.0 L461.8 222.0 L475.1 222.0 L488.3 222.0 L501.5 222.0 L514.7 222.0 L527.9 222.0 L541.2 222.0 L554.4 222.0 L567.6 222.0 L580.8 222.0 L594.0 222.0 L607.3 192.8 L620.5 202.5 L633.7 222.0 L646.9 222.0 L660.1 222.0 L673.4 222.0 L686.6 222.0 L699.8 222.0 L713.0 222.0 L726.2 222.0 L739.5 222.0 L752.7 207.4 L765.9 148.9 L779.1 212.2 L792.3 163.5 L805.6 75.8 L818.8 129.4 L832.0 192.8" pathLength="1" fill="none" stroke="#ECC47E" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+  <g class="fade" style="animation-delay:2.2s"><circle cx="78.4" cy="217.1" r="2.6" fill="#ECC47E"/><circle cx="91.7" cy="178.1" r="2.6" fill="#ECC47E"/><circle cx="276.7" cy="173.2" r="2.6" fill="#ECC47E"/><circle cx="342.8" cy="217.1" r="2.6" fill="#ECC47E"/><circle cx="607.3" cy="192.8" r="2.6" fill="#ECC47E"/><circle cx="620.5" cy="202.5" r="2.6" fill="#ECC47E"/><circle cx="752.7" cy="207.4" r="2.6" fill="#ECC47E"/><circle cx="765.9" cy="148.9" r="2.6" fill="#ECC47E"/><circle cx="779.1" cy="212.2" r="2.6" fill="#ECC47E"/><circle cx="792.3" cy="163.5" r="2.6" fill="#ECC47E"/><circle cx="805.6" cy="75.8" r="2.6" fill="#ECC47E"/><circle cx="818.8" cy="129.4" r="2.6" fill="#ECC47E"/><circle cx="832.0" cy="192.8" r="2.6" fill="#ECC47E"/>
+    <text x="795.6" y="65.8" font-size="12" font-weight="700" fill="#e6edf3" text-anchor="end">30 on Oct 9</text>
+  </g>
+  <circle cx="805.6" cy="75.8" r="4" fill="#ECC47E" class="fade" style="animation-delay:2.4s"/>
+  <circle cx="805.6" cy="75.8" r="4" fill="#ECC47E" class="ping"/>
+</svg>
